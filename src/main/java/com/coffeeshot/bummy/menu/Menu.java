@@ -18,6 +18,8 @@ public class Menu {
     @Column(nullable = false)
     private String UserName;
 
+    private int menu_list;
+
     private String CoffeeName_1;
 
     private String CoffeeName_2;
@@ -25,8 +27,9 @@ public class Menu {
     private String createBy;
 
     @Builder
-    public Menu(String UserName, String CoffeeName_1, String CoffeeName_2, String createBy){
+    public Menu(String UserName, int menu_list, String CoffeeName_1, String CoffeeName_2, String createBy){
         this.UserName = UserName;
+        this.menu_list = menu_list;
         this.CoffeeName_1 = CoffeeName_1;
         this.CoffeeName_2 = CoffeeName_2;
         this.createBy = createBy;

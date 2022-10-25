@@ -19,7 +19,7 @@ import java.util.Optional;
 public class MenuRepositoryTest {
 
     @Autowired
-    MenuRepository menuRepository;
+    MenuRepository menuRepository; //JPARepository 상속하기
 
 //    @After
 //    public void cleanup(){
@@ -30,12 +30,14 @@ public class MenuRepositoryTest {
     public void create(){
         //given
         final String testName = "김용범";
+        final int testMenuList = 1;
         final String testCoffeeName_1 = "아이스아메리카노";
         final String testCoffeeName_2 = "카페 라떼";
 
         menuRepository.save(
                 Menu.builder()
                         .UserName(testName)
+                        .menu_list(testMenuList)
                         .CoffeeName_1(testCoffeeName_1)
                         .CoffeeName_2(testCoffeeName_2)
                         .createBy("test")
