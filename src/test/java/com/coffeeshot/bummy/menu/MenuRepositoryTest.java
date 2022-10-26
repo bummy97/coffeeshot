@@ -1,16 +1,12 @@
 package com.coffeeshot.bummy.menu;
 
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
-import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
@@ -21,34 +17,32 @@ public class MenuRepositoryTest {
     @Autowired
     MenuRepository menuRepository; //JPARepository 상속하기
 
-//    @After
-//    public void cleanup(){
-//        menuRepository.deleteAll();
-//    }
-
     @Test
     public void create(){
-        //given
-        final String testName = "김용범";
-        final int testMenuList = 1;
-        final String testCoffeeName_1 = "아이스아메리카노";
-        final String testCoffeeName_2 = "카페 라떼";
+        Menu menu = new Menu();
 
-        menuRepository.save(
-                Menu.builder()
-                        .UserName(testName)
-                        .menu_list(testMenuList)
-                        .CoffeeName_1(testCoffeeName_1)
-                        .CoffeeName_2(testCoffeeName_2)
-                        .createBy("test")
-                        .build());
-        //when
-        List<Menu> resultList = menuRepository.findAll();
+        menu.setUserName("김용범");
+        menu.setMenu_list(1);
+        menu.setCoffeeName_1("아이스 아메리카노");
+        menu.setCoffeeName_2("콜드브루");
+        menu.setCreateBy("김용범");
 
-        //then
-        Menu result = resultList.get(0);
-        Assertions.assertThat(result.getUserName()).isEqualTo(testName);
+        Menu newmenu = menuRepository.save(menu); //다른 방법으로도 해보기
 
+//        menuRepository.save(
+//                Menu.builder()
+//                        .UserName(testName)
+//                        .menu_list(testMenuList)
+//                        .CoffeeName_1(testCoffeeName_1)
+//                        .CoffeeName_2(testCoffeeName_2)
+//                        .createBy("test")
+//                        .build());
+//        //when
+//        List<Menu> resultList = menuRepository.findAll();
+//
+//        //then
+//        Menu result = resultList.get(0);
+//        Assertions.assertThat(result.getUserName()).isEqualTo(testName);
     }
 
     @Test
