@@ -4,24 +4,21 @@
     <h2>환영합니다. 원하시는 카페와 인원수를 입력해주세요</h2>
 </div>
 <div>
-    <form name="newmenu" action="" method="post">
-        <p>카페 이름</p>
-        <div>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>원하시는 카페를 선택해주세요.</option>
-                <option value="01">스타벅스</option>
-                <option value="02">더카페</option>
-                <option value="03">코앤커피</option>
-            </select>
-        </div>
-        <div>
-            <p>인원수</p>
-            <input type='number' name='usernumber'/>
-        </div>
-        <div>
-            <input type="button" id="makelist" value="만들기">
-        </div>
-    </form>
-
+    <p>카페 이름</p>
+    <div>
+        <select id="cafelist" aria-label="Default select example">
+            <option selected>원하시는 카페를 선택해주세요.</option>
+            <option value="01">스타벅스</option>
+            <option value="02">더카페</option>
+            <option value="03">코앤커피</option>
+        </select>
+    </div>
+    <div>
+        <p>인원수</p>
+        <input type='number' name='usernumber'/>
+    </div>
+    <div>
+        <input type="button" id="btn_makelist" value="만들기">
+    </div>
 </div>
 {{>layout/footer}}
