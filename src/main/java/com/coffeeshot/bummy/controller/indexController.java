@@ -2,6 +2,12 @@ package com.coffeeshot.bummy.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class indexController {
@@ -19,4 +25,16 @@ public class indexController {
     public String menulist(){
         return "menulist";
     }
+
+    @GetMapping("make_list")
+    @ResponseBody
+    public void make_list(HttpServletResponse response, @RequestParam String cafe_name, @RequestParam String user_num) throws Exception{
+        Map<String, Object> data = new HashMap<String, Object>();
+
+        data.put("cafeName", cafe_name);
+        data.put("userNumber", user_num);
+        data.put("success", "success");
+
+    }
+
 }
