@@ -1,5 +1,7 @@
 package com.coffeeshot.bummy.menu;
 
+import com.coffeeshot.bummy.domain.menu.Menu;
+import com.coffeeshot.bummy.domain.menu.MenuRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

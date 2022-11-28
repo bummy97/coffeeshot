@@ -1,4 +1,4 @@
-package com.coffeeshot.bummy.menu_list;
+package com.coffeeshot.bummy.domain.menu_list;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

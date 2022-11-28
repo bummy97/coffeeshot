@@ -1,4 +1,4 @@
-package com.coffeeshot.bummy.menu;
+package com.coffeeshot.bummy.domain.menu;
 
 import lombok.*;
 

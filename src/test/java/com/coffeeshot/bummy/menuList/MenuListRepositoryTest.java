@@ -1,7 +1,7 @@
 package com.coffeeshot.bummy.menuList;
 
-import com.coffeeshot.bummy.menu_list.Menu_list;
-import com.coffeeshot.bummy.menu_list.Menu_listRepository;
+import com.coffeeshot.bummy.domain.menu_list.Menu_list;
+import com.coffeeshot.bummy.domain.menu_list.Menu_listRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

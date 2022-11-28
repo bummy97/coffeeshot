@@ -1,4 +1,4 @@
-package com.coffeeshot.bummy.controller;
+package com.coffeeshot.bummy.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
