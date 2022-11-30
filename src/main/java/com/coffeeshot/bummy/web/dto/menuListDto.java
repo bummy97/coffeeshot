@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class menuListDto {
     private String cafe_name;
-    private String user_num;
+    private int user_num;
 
     @Builder
-    public menuListDto(String cafe_name, String user_num){
+    public menuListDto(String cafe_name, int user_num){
         this.cafe_name = cafe_name;
         this.user_num = user_num;
     }
@@ -20,7 +20,7 @@ public class menuListDto {
     public Menu_list toEntity(){
         return Menu_list.builder()
                 .cafe_name(cafe_name)
-                .user_num(Integer.parseInt(user_num))
+                .user_num(user_num)
                 .made_by("김용범")
                 .build();
     }
