@@ -8,20 +8,15 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class menuListDto {
+    private Long idx;
     private String cafe_name;
     private int user_num;
+    private String made_by;
 
-    @Builder
-    public menuListDto(String cafe_name, int user_num){
-        this.cafe_name = cafe_name;
-        this.user_num = user_num;
-    }
-
-    public Menu_list toEntity(){
-        return Menu_list.builder()
-                .cafe_name(cafe_name)
-                .user_num(user_num)
-                .made_by("김용범")
-                .build();
+    public menuListDto(Menu_list entity){
+        this.idx = entity.getIdx();
+        this.cafe_name = entity.getCafe_name();
+        this.user_num = entity.getUser_num();
+        this.made_by = entity.getMade_by();
     }
 }

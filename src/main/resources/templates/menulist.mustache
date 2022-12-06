@@ -1,13 +1,29 @@
 {{>layout/header}}
-<h1>메뉴 조회하기</h1>
+<h1>메뉴 리스트 조회하기</h1>
 <!--목록 추가 영역-->
 <table class = "table table-horiziontal table-bordered">
     <thead class="thead-strong">
     <tr>
-        <th>메뉴 번호</th>
+        <th>메뉴 리스트 번호</th>
         <th>제목</th>
+        <th>인원수</th>
         <th>작성자</th>
+        <th></th>
     </tr>
     </thead>
+    <tbody id="tbody">
+    {{#posts}}
+        <tr>
+            <td>{{idx}}</td>
+            <td>{{cafe_name}}</td>
+            <td>{{user_num}}</td>
+            <td>{{made_by}}</td>
+            <td>
+                <button type="button" class = "btn btn-primary">이동하기</button>
+            </td>
+        </tr>
+    {{/posts}}
+    </tbody>
 </table>
+<button type="button" class = "btn btn-danger" id="btn_back">Back</button>
 {{>layout/footer}}
