@@ -13,27 +13,25 @@ import java.time.LocalDateTime;
 public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idx;
+    private int idx;
+
+    private int list_idx;
 
     @Column(nullable = false)
-    private String UserName;
+    private String user_name;
 
-    private int menu_list;
+    private String coffee_name_1;
 
-    private String CoffeeName_1;
+    private String coffee_name_2;
 
-    private String CoffeeName_2;
-
-    private String createBy;
+    private String create_by;
 
     @Builder
-    public Menu(String UserName, int menu_list, String CoffeeName_1, String CoffeeName_2, String createBy){
-        this.UserName = UserName;
-        this.menu_list = menu_list;
-        this.CoffeeName_1 = CoffeeName_1;
-        this.CoffeeName_2 = CoffeeName_2;
-        this.createBy = createBy;
+    public Menu(int list_idx, String user_name, String coffee_name_1, String coffee_name_2, String create_by){
+        this.list_idx = list_idx;
+        this.user_name = user_name;
+        this.coffee_name_1 = coffee_name_1;
+        this.coffee_name_2 = coffee_name_2;
+        this.create_by = create_by;
     }
-
-
 }
