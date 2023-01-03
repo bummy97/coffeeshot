@@ -17,15 +17,19 @@ public class indexController {
         return "index";
     }
 
-    @GetMapping("makelist")
+    @GetMapping("/makelist")
     public String makelist(){
         return "makelist";
     }
 
-    @GetMapping("menulist")
+    @GetMapping("/menulist")
     public String menulist(Model model){
         model.addAttribute("posts", menu_listService.findAllDesc());
         return "menulist";
     }
 
+    @GetMapping("/makemenu")
+    public String makeMenu(){
+        return "makemenu";
+    }
 }
