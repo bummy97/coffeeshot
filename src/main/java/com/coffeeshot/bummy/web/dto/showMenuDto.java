@@ -6,16 +6,14 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class makeMenuDto {
-    private int idx;
+public class showMenuDto {
     private int list_idx;
     private String user_name;
     private String coffee_name_1;
     private String coffee_name_2;
     private String create_by;
 
-    public makeMenuDto(Menu entity){
-        this.idx = entity.getIdx();
+    public showMenuDto(Menu entity){
         this.list_idx = entity.getList_idx();
         this.user_name = entity.getUser_name();
         this.coffee_name_1 = entity.getCoffee_name_1();

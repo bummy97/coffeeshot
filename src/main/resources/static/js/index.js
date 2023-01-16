@@ -7,7 +7,7 @@ $(document).ready(function (){
       window.location.href = "/menulist";
    });
 
-   $('#move_menu').on('click', function (){
+   $('#show_menu').on('click', function (){
       var idx = $(this).val();
 
       $.ajax({
@@ -19,7 +19,7 @@ $(document).ready(function (){
             console.log("성공");
          },
          error : function (){
-            console.log("살퍄");
+            console.log("실패");
          }
       });
    });

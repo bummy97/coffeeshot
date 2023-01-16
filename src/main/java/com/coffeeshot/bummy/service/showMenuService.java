@@ -1,7 +1,9 @@
 package com.coffeeshot.bummy.service;
 
+import com.coffeeshot.bummy.domain.menu.Menu;
 import com.coffeeshot.bummy.domain.menu.MenuRepository;
-import com.coffeeshot.bummy.web.dto.makeMenuDto;
+import com.coffeeshot.bummy.domain.menu.showMenuInterface;
+import com.coffeeshot.bummy.web.dto.showMenuDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,8 @@ public class showMenuService {
     private final MenuRepository menuRepository;
 
     @Transactional
-    public List<makeMenuDto> findAllByListIdx(int idx){
-        return menuRepository.findAllByListIdx(idx).stream().map(makeMenuDto::new).collect(Collectors.toList());
+    public List<showMenuDto> findAllByListIdx(int idx){
+        return menuRepository.findAllByListIdx(idx).stream().map(showMenuDto::new).collect(Collectors.toList());
     }
 
 }

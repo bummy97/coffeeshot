@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 
 @Data
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Menu {
@@ -27,7 +26,8 @@ public class Menu {
     private String create_by;
 
     @Builder
-    public Menu(int list_idx, String user_name, String coffee_name_1, String coffee_name_2, String create_by){
+    public Menu(int idx, int list_idx, String user_name, String coffee_name_1, String coffee_name_2, String create_by){
+        this.idx = idx;
         this.list_idx = list_idx;
         this.user_name = user_name;
         this.coffee_name_1 = coffee_name_1;
