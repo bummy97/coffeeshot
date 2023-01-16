@@ -7,8 +7,9 @@ $(document).ready(function (){
       window.location.href = "/menulist";
    });
 
-   $('#show_menu').on('click', function (){
-      var idx = $(this).val();
+   $('button[name=show_menu]').on('click', function (){
+      let idx = $(this).val();
+      console.log(idx);
 
       $.ajax({
          url : "/showMenu",
